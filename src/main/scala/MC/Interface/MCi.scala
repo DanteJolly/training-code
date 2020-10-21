@@ -24,7 +24,6 @@ class MCi {
     println("Database: Genome Database")
     println("Exit: Close Program")
   }
-
   var file:String=""
 
 

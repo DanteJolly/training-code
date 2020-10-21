@@ -57,7 +57,8 @@ class DBi(protein:List[String]) {
           db.insertGene(name,description)
         }
         case commandArgPattern(cmd, arg) if cmd.equalsIgnoreCase("Back") => {
-            new MCi().menu()
+          continue=false
+          new MCi().menu()
         }
         case notRecognized => println(s"$notRecognized not a recognized command")
 

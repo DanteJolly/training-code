@@ -20,6 +20,7 @@ class DNAi(strand:List[Char]) {
     println("NC: Show Nucleotides")
     println("RNA: Show mRNA strand")
     println("Protein: Convert to Protein")
+    println("Back: Go back to main menu")
   }
 
   def menu(): Unit = {
@@ -52,6 +53,7 @@ class DNAi(strand:List[Char]) {
           new DBi(dna.protein).menu()
         }
         case  commandArgPattern(cmd, arg) if cmd.equalsIgnoreCase( "Back")=>{
+          continue=false
           new MCi().menu()
         }
         case   notRecognized => println(s"$notRecognized not a recognized command")
